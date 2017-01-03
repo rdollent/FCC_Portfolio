@@ -1,0 +1,230 @@
+/*start CSS reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*End CSS reset*/
+
+
+* {
+  /*border: 1px solid white !important; /*to display borders of elements, helps with CSS position and resize*/
+  box-sizing:border-box;
+}
+
+
+body {
+  text-align: center;
+  width: 100%;
+  /*always use % with width, % of screen*/
+}
+
+h3 {
+  font-family: 'Unica One';
+  color: #fff;
+  /* "#---" is shorthand for hex colours */
+  font-size: 250%;
+}
+
+a,
+p {
+  font-family: 'Inconsolata';
+  font-size: 120%;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+header {
+  position: fixed;
+  /*use to make element position stay while scrolling */
+  background-color: #1E90FF;
+  top: 0;
+  /*can only be used when position is fixed*/
+  left: 0;
+  right: 0;
+  z-index: 1;
+  /*higher means its stack is more priority*/
+  padding:7px;
+}
+
+header nav {
+  text-align: center;
+  /*shorthand margin: top/bottom and left/right*/
+}
+
+header a {
+  margin: 0px 5px;
+  padding:10px;
+  display:inline-block;
+}
+
+header a:hover {
+  text-decoration: none;
+  /*removes underline when hovering over links*/
+  background-color: #F0FFFF;
+  padding: 10px;
+  /*space between border and text inside element */
+  transition: 0.5s;
+  border-radius: 30px;
+  font-style: bold;
+  color: #696969;
+}
+
+.about {
+  margin-top: 50px;
+  background: #96ceb4;
+  padding: 70px;
+  /*since nav is position:fixed, .about will be moved up. add padding to move .about. can't use "top:" because .about is not relative*/
+}
+
+.about p {
+  width: 60%;
+  /*will occupy 60% of parent element .about's width */
+  margin: 40px auto 0 auto;
+}
+
+.portfolio {
+  padding: 70px;
+  background: #dfbc6c;
+}
+
+.portfolio p {
+  margin: 50px auto 0 auto;
+}
+
+.portfolio img {
+  width: 30%;
+  height: auto;
+  margin-top:30px;
+}
+
+.contact {
+  padding: 70px;
+  background: #CD5C5C;
+  overflow:auto; /*need when children are floated*/
+}
+
+.contact-boxes {
+  margin: 10px;
+  /*add spaces between textboxes */
+  resize: none;
+  /*prevent resize, ,mainly for <textarea> */
+  border-radius: 4px;
+  font-family: 'Inconsolata';
+  width:80%;
+}
+
+textarea.contact-boxes {
+  /*select <text-area> child of .contact-boxes class*/
+  height: 150px;
+}
+
+.contact-form {
+  float:left;
+  width:300px;
+  padding-top:20px;
+  margin-left:50px;
+}
+
+.contact-links {
+  width: 30%;
+  height: auto;
+  float:right;
+  padding: 20px 0px;
+
+}
+.contact-links a {
+  margin: 5px;
+  border: solid;
+  border-radius: 30px;
+  padding:10px;
+  display:inline-block;
+}
+.contact-links i {
+  text-align: center;
+}
+
+.contact-links a:hover {
+  transition: 0.5s;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  padding:15px;
+}
+.backtotop {
+  clear: both; /*use to not overlap with floated elements */
+  padding-top:20px;
+}
+.backtotop a:hover{
+  text-decoration:none;
+  transition:0.5s;
+  font-weight:bold;
+  color: #fff;
+}
+footer {
+  background-color: #696969;
+  padding:2px;
+  color: #fff;
+  clear: both;
+}
+/*mobile site*/
+@media only screen and (max-width:768px){
+  .portfolio,.about, .contact {
+    width:100%;
+    padding-left:0;
+    padding-right: 0;
+  }
+  .portfolio img, .about p,.portfolio p, .contact-form, .contact-links{
+    width: 100%;
+    padding: 10px;
+  }
+  .contact-form {
+    margin-left:0;
+  }
+ 
+}
