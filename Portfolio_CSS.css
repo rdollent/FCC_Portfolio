@@ -213,7 +213,7 @@ footer {
   clear: both;
 }
 /*mobile site*/
-@media only screen and (max-width:600px){
+@media only screen and (max-width:768px){
   .portfolio,.about, .contact {
     width:100%;
     padding-left:0;
